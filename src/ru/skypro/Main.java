@@ -1,7 +1,5 @@
 package ru.skypro;
 
-import javax.swing.*;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -19,19 +17,26 @@ public class Main {
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] > maxCosts) {
                 maxCosts = arr[i];
-                System.out.println("Максимальная сумма трат за день составила " + maxCosts + "рублей");
             }
         }
+        System.out.println("Максимальная сумма трат за день составила " + maxCosts + "рублей");
+
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] < minCosts) {
                 minCosts = arr[i];
-                System.out.println("Минимальная сумма трат за день составила " + minCosts + "рублей");
             }
-
         }
+        System.out.println("Минимальная сумма трат за день составила " + minCosts + "рублей");
+
         // Задание 3
         double average = sum / arr.length + 1;
         System.out.println("Средняя сумма трат за месяц составила " + average + "рублей");
+
+        // Задание 4
+        char [] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        for (int f = reverseFullName.length - 1; f >=0  ; f-- ) {
+            System.out.print(reverseFullName[f]);
+        }
     }
 
     public static int[] generateRandomArray() {
@@ -42,11 +47,5 @@ public class Main {
         }
         return arr;
     }
-    // Задание 4
-    char [] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-    for (char f = reverseFullName.length; f >= 0; f--) {
-        if (f == reverseFullName.length - 1) {
-            System.out.println(reverseFullName [f]);
-        }
-    }
+
 }
